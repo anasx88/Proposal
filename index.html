@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقترح مشروع إدارة الفعاليات وسلامة الحشود</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.8;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-right: 5px solid #667eea;
+        }
+        
+        .section-title {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section-content {
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .section-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        ul li {
+            padding: 12px 0;
+            padding-right: 25px;
+            position: relative;
+            color: #444;
+        }
+        
+        ul li:before {
+            content: "◄";
+            position: absolute;
+            right: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .chapter {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .chapter:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .chapter-title {
+            color: #2a5298;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .chapter-desc {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        .methodology {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .method-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .method-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .method-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .value-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📘 مقترح مشروع</h1>
+            <p class="subtitle">إعداد مرجع عربي حاكم لإدارة الفعاليات وسلامة الحشود وإدارة المخاطر</p>
+            <p class="subtitle" style="font-size: 1em; margin-top: 10px;">Event Management – Crowd Safety – Risk Management</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">أولًا: خلفية المشروع</h2>
+                <div class="section-content">
+                    <p>في ظل التوسع المتسارع في تنظيم الفعاليات الكبرى، والتجمعات البشرية الكثيفة، والمواسم ذات الحساسية العالية، تبرز الحاجة إلى مرجع عربي موحّد وحاكم يعالج إدارة الفعاليات وسلامة الحشود وإدارة المخاطر بوصفها منظومة تشغيلية متكاملة قائمة على العلم، والحوكمة، والقرار، وليس مجرد إرشادات عامة أو تعليمات جزئية.</p>
+                    <p>وقد أثبتت التجارب العالمية أن الإخفاق في هذا المجال لا يعود غالبًا إلى نقص الموارد أو تعدد الجهات، بل إلى غياب مرجعية تشغيلية موحّدة تضبط المفاهيم، وتحدّد الصلاحيات، وتربط المخاطر مباشرة بقرارات ميدانية واضحة.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">ثانيًا: إشكالية الواقع الحالي</h2>
+                <div class="section-content">
+                    <p>على الرغم من توفر:</p>
+                    <ul>
+                        <li>خطط تشغيل للفعاليات</li>
+                        <li>لجان متعددة الاختصاصات</li>
+                        <li>أطر عامة للسلامة والطوارئ</li>
+                    </ul>
+                    <p style="margin-top: 20px;">إلا أن الحوادث العالمية والإقليمية تشير إلى تحديات متكررة، من أبرزها:</p>
+                    <ul>
+                        <li>الخلط بين التحكم بالحشود (Crowd Control)، وإدارة الحشود (Crowd Management)، وسلامة الحشود (Crowd Safety)</li>
+                        <li>ضعف تحويل علم الحشود إلى قرارات تشغيلية قابلة للتنفيذ</li>
+                        <li>غياب حدود قرار واضحة لإيقاف أو استمرار الحدث</li>
+                        <li>تضارب الصلاحيات أثناء التشغيل الميداني</li>
+                        <li>ضعف التوثيق والتحليل المهني بعد الحوادث</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">ثالثًا: هدف المشروع</h2>
+                <div class="section-content">
+                    <p>يهدف هذا المشروع إلى تأليف مرجع عربي أساسي يُعتمد عليه في:</p>
+                    <ul>
+                        <li>تصميم الفعاليات الآمنة</li>
+                        <li>التشغيل الميداني وإدارة الحشود</li>
+                        <li>اتخاذ القرار في الظروف الاعتيادية والحرجة</li>
+                        <li>إدارة المخاطر قبل وأثناء الحدث</li>
+                        <li>المساءلة المهنية والتحقيق بعد الحوادث</li>
+                    </ul>
+                    <p style="margin-top: 20px;">على أن يكون المرجع قابلًا للاستخدام التشغيلي المباشر، وليس مادة وصفية أو تثقيفية فقط.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">رابعًا: الفئة المستهدفة</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>الجهات المنظمة للفعاليات</li>
+                        <li>الجهات الإشرافية والتنظيمية</li>
+                        <li>القيادات الميدانية</li>
+                        <li>مسؤولو السلامة (Safety Officers)</li>
+                        <li>مسؤولو إدارة المخاطر (Risk Managers)</li>
+                        <li>غرف العمليات والتحكم</li>
+                        <li>لجان التحقيق والمراجعة بعد الحوادث</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">خامسًا: المنهجية المعتمدة</h2>
+                <div class="section-content">
+                    <p>يعتمد الكتاب على منهجية مهنية ثلاثية الأبعاد:</p>
+                    <div class="methodology">
+                        <div class="method-card">
+                            <h3>١. البعد العلمي</h3>
+                            <p>علم الحشود وسلوك التجمعات البشرية</p>
+                            <p style="font-size: 0.85em; margin-top: 10px;">(Crowd Science & Crowd Dynamics)</p>
+                        </div>
+                        <div class="method-card">
+                            <h3>٢. البعد التنظيمي</h3>
+                            <p>الحوكمة، الصلاحيات، والمسؤوليات</p>
+                            <p style="font-size: 0.85em; margin-top: 10px;">(Governance & Authority)</p>
+                        </div>
+                        <div class="method-card">
+                            <h3>٣. البعد التشغيلي</h3>
+                            <p>اتخاذ القرار الميداني وإدارة الحدث لحظيًا</p>
+                            <p style="font-size: 0.85em; margin-top: 10px;">(Operational Decision-Making)</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 25px; text-align: center; font-weight: bold; color: #2a5298;">ويُبنى كل فصل وفق تسلسل ثابت:</p>
+                    <p style="text-align: center; color: #667eea; font-size: 1.1em; margin-top: 10px;">مفهوم ← معيار ← مؤشر خطر ← قرار ← أداة ← سيناريو تطبيقي ← خطأ شائع</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">سادسًا: محتويات المرجع المقترح</h2>
+                <div class="section-content">
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الأول: الإطار الحاكم لإدارة الفعاليات والحشود</div>
+                        <div class="chapter-desc">
+                            • تعريف الحدث كنظام تشغيلي (Event as a System)<br>
+                            • الفروقات الجوهرية بين Crowd Control / Crowd Management / Crowd Safety<br>
+                            • حدود المسؤولية المهنية والقانونية<br>
+                            • أخطاء شائعة في إدارة الفعاليات
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الثاني: علم الحشود (Crowd Science)</div>
+                        <div class="chapter-desc">
+                            • الكثافة (Density) ومعدلات التدفق (Flow Rates)<br>
+                            • نقاط الاختناق (Bottlenecks)<br>
+                            • الحدود الحرجة (Critical Thresholds)<br>
+                            • متى تتحول الحشود إلى خطر قاتل
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الثالث: سيكولوجية الحشود تحت الصدمة</div>
+                        <div class="chapter-desc">
+                            • الفرق بين الذعر (Panic) والانضغاط (Compression)<br>
+                            • تأثير السقوط الأول (First Fall Effect)<br>
+                            • دور الإشاعات والمؤثرات السمعية والبصرية<br>
+                            • أخطاء القادة في لحظات الصدمة الأولى
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الرابع: تصميم الفعالية الآمنة (Event Design)</div>
+                        <div class="chapter-desc">
+                            • التخطيط الاستيعابي (Capacity Planning)<br>
+                            • التقسيم المكاني (Zoning & Segmentation)<br>
+                            • المداخل والمخارج (Access / Egress)<br>
+                            • رحلة الحشد (Crowd Journey Mapping)<br>
+                            • التصميم الذي يولّد الخطر دون قصد
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الخامس: إدارة المخاطر للفعاليات</div>
+                        <div class="chapter-desc">
+                            • تقييم المخاطر المسبق (Static Risk Assessment)<br>
+                            • إدارة المخاطر الديناميكية أثناء الحدث (Dynamic Risk)<br>
+                            • مؤشرات الإنذار المبكر<br>
+                            • منطق الاستمرار أو الإيقاف (Stop / Continue Logic)
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب السادس: التشغيل الميداني وإدارة الحشود</div>
+                        <div class="chapter-desc">
+                            • هيكلة فرق إدارة الحشود<br>
+                            • إدارة التدفق لحظيًا<br>
+                            • الاتصال والتصعيد<br>
+                            • أدلة تشغيلية (Operational Playbooks)
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب السابع: حدود القرار الحرجة</div>
+                        <div class="chapter-desc">
+                            • متى يصبح الاستمرار خطأ جسيمًا؟<br>
+                            • مؤشرات غير قابلة للتفاوض<br>
+                            • حماية القائد من الضغط الإداري<br>
+                            • توثيق القرار الحرج
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الثامن: إدارة تضارب الصلاحيات</div>
+                        <div class="chapter-desc">
+                            • تضارب الجهات أثناء الفعالية<br>
+                            • آليات حسم القرار<br>
+                            • تفويض الصلاحيات بوضوح
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب التاسع: التحول من حدث إلى حادث</div>
+                        <div class="chapter-desc">
+                            • متى ولماذا يتم تفعيل الطوارئ<br>
+                            • الفرق بين إدارة الحشود وإدارة الحوادث<br>
+                            • الإخلاء: متى يكون حلًا ومتى خطرًا
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب العاشر: إدارة ما بعد الحادث</div>
+                        <div class="chapter-desc">
+                            • أول 60 دقيقة بعد السيطرة<br>
+                            • إدارة الإعلام والشهود<br>
+                            • التقارير الأولية والنهائية
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الحادي عشر: Crowd Failure vs System Failure</div>
+                        <div class="chapter-desc">
+                            • تحليل سبب الفشل الحقيقي<br>
+                            • أخطاء شائعة في لجان التحقيق<br>
+                            • بناء دروس مستفادة دقيقة وقابلة للتطبيق
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الثاني عشر: الأخطاء المهنية القاتلة</div>
+                        <div class="chapter-desc">
+                            • قرارات تشغيلية تسببت بكوارث عالمية<br>
+                            • أنماط تكررت في معظم الحوادث الجسيمة
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الباب الثالث عشر: اختبار جاهزية القائد</div>
+                        <div class="chapter-desc">
+                            • سيناريوهات ضغط واتخاذ قرار<br>
+                            • تقييم الجاهزية القيادية<br>
+                            • تصنيف القائد ميدانيًا
+                        </div>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-title">الملاحق التشغيلية</div>
+                        <div class="chapter-desc">
+                            • قوائم تحقق (Checklists)<br>
+                            • جداول كثافة وتدفق<br>
+                            • خرائط قرار<br>
+                            • نماذج تقارير<br>
+                            • قاموس مصطلحات عربي / English
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">سابعًا: مخرجات المشروع</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>مرجع عربي مطبوع ورقمي</li>
+                        <li>دليل تشغيلي مختصر للقيادات الميدانية</li>
+                        <li>مادة تدريبية قابلة للاعتماد المؤسسي</li>
+                        <li>قاعدة مرجعية موحدة للجهات واللجان</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">ثامنًا: القيمة المضافة للجهة</h2>
+                <div class="section-content">
+                    <div class="value-grid">
+                        <div class="value-item">
+                            <div class="icon">🛡️</div>
+                            <strong>تقليل احتمالية الحوادث الجسيمة</strong>
+                        </div>
+                        <div class="value-item">
+                            <div class="icon">📊</div>
+                            <strong>رفع جودة القرار الميداني</strong>
+                        </div>
+                        <div class="value-item">
+                            <div class="icon">🤝</div>
+                            <strong>توحيد المرجعية بين الجهات</strong>
+                        </div>
+                        <div class="value-item">
+                            <div class="icon">⚖️</div>
+                            <strong>دعم المساءلة المهنية العادلة</strong>
+                        </div>
+                        <div class="value-item">
+                            <div class="icon">👥</div>
+                            <strong>بناء كوادر وطنية مؤهلة بمرجع موثوق</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
